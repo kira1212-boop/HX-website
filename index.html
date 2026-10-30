@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HYPER X OS 1.00 (HXOS)</title>
+  <style>
+    :root { --bg: #0c0f12; --card: #14191f; --text: #c9d1d9; --accent: #238636; --border: #30363d; }
+    body { background-color: var(--bg); color: var(--text); font-family: monospace; padding: 2rem 1rem; line-height: 1.5; }
+    .container { max-width: 800px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; color: #ff7b72; }
+    .logo-ascii { white-space: pre; font-weight: bold; line-height: 1.2; display: inline-block; text-align: left; color: #58a6ff; margin-bottom: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    h2 { border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1rem; color: #f0f6fc; }
+    .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: bold; }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: 0.5rem; }
+    li::before { content: "> "; color: #58a6ff; }
+    pre { background: #010409; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; overflow-x: auto; color: #79c0ff; }
+    a { color: #58a6ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-ascii">
+▓   ▓ ▓   ▓   
+▓░  ▓░ ▓ ▓ ░  
+▓▓▓▓▓░░ ▓ ░ ░ 
+▓░░░▓░░▓ ▓ ░  
+▓░░░▓░▓ ░ ▓   
+ ░░  ░░░ ░ ░  
+  ░   ░ ░   ░
+      </div>
+      <h1>HYPER X OS 1.00 (HXOS)</h1>
+      <p>An ultra-lightweight operating system written completely in Pure Assembly Language.</p>
+      <p>Fully inspired by terry's work. RIP Terry a davis, its also made with a 12 year old boy</p>
+      <p>Kristoff had raw talents.</p>
+      <p>Quote for the day: Bloat dont float</p>
+    </header>
+
+    <div class="card" style="text-align: center;">
+      <h2> First Release Live</h2>
+      <p style="margin-bottom: 1rem;">Inspired by TempleOS. Built by a 12-year-old operating system developer.</p>
+      <a href="https://github.com" class="btn" target="_blank">View GitHub Releases</a>
+    </div>
+
+    <div class="card">
+      <h2> Core Features</h2>
+      <ul>
+        <li><strong>Bare-Metal Installer:</strong> Dual-drive sector routing and valid FAT32 formatter engine.</li>
+        <li><strong>TUI Workspace:</strong> Hyper-optimized text interface environment featuring row boundary monitoring.</li>
+        <li><strong>HXedit Editor &amp; Auditor:</strong> Text creation tool saving directly to sector 50 alongside a dual-pass hex sector auditor.</li>
+        <li><strong>Subsystem Utilities:</strong> Low-level calculator processor, real-time motherboard CMOS clock interface, and port cold reboots.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2> Codebase Architecture</h2>
+      <ul>
+        <li>boot.asm — Master Boot Sector bootstrap track</li>
+        <li>kernel.asm — Command routing shell layout</li>
+        <li>ui.asm / uicustom.asm — Custom canvas text palette rendering</li>
+        <li>install.asm / partlist.asm — Low-level MBR partition tool chain</li>
+        <li>compiler.asm / software.asm — Embedded multi-language check engine</li>
+        <li>HXcalu.asm / HXedit.asm / Read.asm — Calculator, terminal sandbox editor, and dual-column text parser</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2> Setup Pipeline</h2>
+      <p>Generate a 32MB clean raw testing framework disk to safely evaluate the disk installer utilities:</p>
+      <pre>dd if=/dev/zero of=fake_disk.img bs=1M count=32</pre>
+    </div>
+
+    <footer style="text-align: center; margin-top: 2rem; color: #8b949e;">
+      <p>Hosted on <a href="https://github.com" target="_blank">GitHub</a></p>
+    </footer>
+  </div>
+</body>
+</html>
